@@ -70,20 +70,22 @@ ol {
   flex-direction: row;
   align-content: flex-end;
   gap: 30px;
-  padding: 133px 30px 133px 30px;
+  padding-left:30px; 
+  padding-right:30px;
   inline-size: 1200px;
 }
 
 .result {
   display: flex;
   flex-direction: column;
+  padding-top:78px;
 }
 
 .result__video-container {
   position: relative;
-  padding-top: 78px;
-  min-width: 711px;
-  min-height: 386px;
+  inline-size: 711px;
+  block-size: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -99,8 +101,7 @@ ol {
   align-items: start;
   justify-content: space-between;
   gap: 40px;
-  padding-top: 7px;
-}
+ }
 
 .search-form__label {
   cursor: pointer;
@@ -213,6 +214,7 @@ input[type="checkbox"]:checked + span::after {
   align-items:center;
   margin-top: 30px;
   block-size: 34px;
+  margin-bottom: 5px;
 }
 
 .button:focus {
@@ -236,8 +238,8 @@ input[type="checkbox"]:checked + span::after {
 .content__details {
   display: flex;
   flex-direction: column;
-  max-width: 399px;
-  gap: 26px;
+  min-width: 400px;
+  gap: 22px;
 }
 
 .content__list-container {
@@ -299,14 +301,15 @@ input[type="checkbox"]:checked + span::after {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   line-clamp: 3;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description-container {
   display: block;
   gap: 6px;
-  width: 100%;
+  max-width: 196px;
   flex-grow: 1;
   overflow: hidden;
 }
